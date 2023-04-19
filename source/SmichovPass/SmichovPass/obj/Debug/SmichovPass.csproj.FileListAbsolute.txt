@@ -1,0 +1,10 @@
+C:\Users\bruthans.kr.2022\Desktop\SmichovPass\source\SmichovPass\SmichovPass\bin\Debug\SmichovPass.exe.config
+C:\Users\bruthans.kr.2022\Desktop\SmichovPass\source\SmichovPass\SmichovPass\bin\Debug\SmichovPass.exe
+C:\Users\bruthans.kr.2022\Desktop\SmichovPass\source\SmichovPass\SmichovPass\bin\Debug\SmichovPass.pdb
+C:\Users\bruthans.kr.2022\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Debug\SmichovPass.csprojAssemblyReference.cache
+C:\Users\bruthans.kr.2022\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Debug\SmichovPass.Form1.resources
+C:\Users\bruthans.kr.2022\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Debug\SmichovPass.Properties.Resources.resources
+C:\Users\bruthans.kr.2022\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Debug\SmichovPass.csproj.GenerateResource.cache
+C:\Users\bruthans.kr.2022\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Debug\SmichovPass.csproj.CoreCompileInputs.cache
+C:\Users\bruthans.kr.2022\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Debug\SmichovPass.exe
+C:\Users\bruthans.kr.2022\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Debug\SmichovPass.pdb

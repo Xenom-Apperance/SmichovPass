@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29020.237
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmichovPass", "SmichovPass\SmichovPass.csproj", "{B6E147B0-E998-4D18-89F6-1151093584EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6E147B0-E998-4D18-89F6-1151093584EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6E147B0-E998-4D18-89F6-1151093584EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6E147B0-E998-4D18-89F6-1151093584EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6E147B0-E998-4D18-89F6-1151093584EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59739D6A-830B-412A-95DA-60E59A2BDEBE}
+	EndGlobalSection
+EndGlobal
