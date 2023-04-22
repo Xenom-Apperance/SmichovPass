@@ -37,16 +37,16 @@
             this.JmenoBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.HesloBox = new System.Windows.Forms.TextBox();
-            this.ShowPass = new System.Windows.Forms.CheckBox();
             this.CopyButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.LoadButton = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.KeyBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AddRecord = new System.Windows.Forms.Button();
             this.RemoveRecord = new System.Windows.Forms.Button();
-            this.EditRecord = new System.Windows.Forms.Button();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordViewer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +61,7 @@
             this.PasswordViewer.Location = new System.Drawing.Point(424, 131);
             this.PasswordViewer.Name = "PasswordViewer";
             this.PasswordViewer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.PasswordViewer.Size = new System.Drawing.Size(370, 321);
+            this.PasswordViewer.Size = new System.Drawing.Size(370, 301);
             this.PasswordViewer.TabIndex = 0;
             this.PasswordViewer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PasswordViewer_CellContentClick);
             // 
@@ -77,14 +77,14 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(424, 458);
+            this.progressBar1.Location = new System.Drawing.Point(424, 467);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(370, 23);
             this.progressBar1.TabIndex = 2;
             // 
             // StrankaBox
             // 
-            this.StrankaBox.Location = new System.Drawing.Point(23, 205);
+            this.StrankaBox.Location = new System.Drawing.Point(23, 235);
             this.StrankaBox.Name = "StrankaBox";
             this.StrankaBox.Size = new System.Drawing.Size(301, 20);
             this.StrankaBox.TabIndex = 3;
@@ -93,7 +93,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(18, 173);
+            this.label2.Location = new System.Drawing.Point(18, 203);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(258, 29);
             this.label2.TabIndex = 4;
@@ -103,7 +103,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(18, 264);
+            this.label3.Location = new System.Drawing.Point(18, 294);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(210, 29);
             this.label3.TabIndex = 6;
@@ -112,7 +112,7 @@
             // 
             // JmenoBox
             // 
-            this.JmenoBox.Location = new System.Drawing.Point(23, 296);
+            this.JmenoBox.Location = new System.Drawing.Point(23, 326);
             this.JmenoBox.Name = "JmenoBox";
             this.JmenoBox.Size = new System.Drawing.Size(301, 20);
             this.JmenoBox.TabIndex = 5;
@@ -122,7 +122,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(18, 351);
+            this.label4.Location = new System.Drawing.Point(18, 381);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 29);
             this.label4.TabIndex = 8;
@@ -131,29 +131,18 @@
             // 
             // HesloBox
             // 
-            this.HesloBox.Location = new System.Drawing.Point(23, 383);
+            this.HesloBox.Location = new System.Drawing.Point(23, 413);
             this.HesloBox.Name = "HesloBox";
             this.HesloBox.Size = new System.Drawing.Size(301, 20);
             this.HesloBox.TabIndex = 7;
             // 
-            // ShowPass
-            // 
-            this.ShowPass.AutoSize = true;
-            this.ShowPass.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ShowPass.Location = new System.Drawing.Point(98, 360);
-            this.ShowPass.Name = "ShowPass";
-            this.ShowPass.Size = new System.Drawing.Size(97, 17);
-            this.ShowPass.TabIndex = 9;
-            this.ShowPass.Text = "Zobrazit heslo";
-            this.ShowPass.UseVisualStyleBackColor = true;
-            // 
             // CopyButton
             // 
-            this.CopyButton.Location = new System.Drawing.Point(23, 409);
+            this.CopyButton.Location = new System.Drawing.Point(424, 438);
             this.CopyButton.Name = "CopyButton";
-            this.CopyButton.Size = new System.Drawing.Size(75, 23);
+            this.CopyButton.Size = new System.Drawing.Size(194, 23);
             this.CopyButton.TabIndex = 10;
-            this.CopyButton.Text = "Kopírovat";
+            this.CopyButton.Text = "Kopírovat zvolené heslo do schránky";
             this.CopyButton.UseVisualStyleBackColor = true;
             this.CopyButton.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -177,13 +166,14 @@
             this.LoadButton.TabIndex = 12;
             this.LoadButton.Text = "Načíst soubor";
             this.LoadButton.UseVisualStyleBackColor = true;
+            this.LoadButton.Click += new System.EventHandler(this.LoadButton_Click);
             // 
-            // textBox4
+            // KeyBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(390, 104);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(172, 20);
-            this.textBox4.TabIndex = 13;
+            this.KeyBox.Location = new System.Drawing.Point(390, 104);
+            this.KeyBox.Name = "KeyBox";
+            this.KeyBox.Size = new System.Drawing.Size(172, 20);
+            this.KeyBox.TabIndex = 13;
             // 
             // label5
             // 
@@ -210,7 +200,7 @@
             // AddRecord
             // 
             this.AddRecord.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.AddRecord.Location = new System.Drawing.Point(23, 131);
+            this.AddRecord.Location = new System.Drawing.Point(217, 441);
             this.AddRecord.Name = "AddRecord";
             this.AddRecord.Size = new System.Drawing.Size(107, 39);
             this.AddRecord.TabIndex = 16;
@@ -220,25 +210,24 @@
             // 
             // RemoveRecord
             // 
-            this.RemoveRecord.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.RemoveRecord.Location = new System.Drawing.Point(136, 131);
+            this.RemoveRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.RemoveRecord.Location = new System.Drawing.Point(673, 438);
             this.RemoveRecord.Name = "RemoveRecord";
-            this.RemoveRecord.Size = new System.Drawing.Size(110, 39);
+            this.RemoveRecord.Size = new System.Drawing.Size(121, 23);
             this.RemoveRecord.TabIndex = 17;
-            this.RemoveRecord.Text = "Odebrat heslo";
+            this.RemoveRecord.Text = "Odebrat zvolené heslo";
             this.RemoveRecord.UseVisualStyleBackColor = true;
             this.RemoveRecord.Click += new System.EventHandler(this.RemoveRecord_Click);
             // 
-            // EditRecord
+            // label6
             // 
-            this.EditRecord.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.EditRecord.Location = new System.Drawing.Point(249, 131);
-            this.EditRecord.Name = "EditRecord";
-            this.EditRecord.Size = new System.Drawing.Size(114, 39);
-            this.EditRecord.TabIndex = 18;
-            this.EditRecord.Text = "Upravit heslo";
-            this.EditRecord.UseVisualStyleBackColor = true;
-            this.EditRecord.Click += new System.EventHandler(this.EditRecord_Click);
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label6.Location = new System.Drawing.Point(15, 157);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(209, 46);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "Nové heslo";
             // 
             // Form1
             // 
@@ -247,15 +236,14 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(838, 495);
-            this.Controls.Add(this.EditRecord);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.RemoveRecord);
             this.Controls.Add(this.AddRecord);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.KeyBox);
             this.Controls.Add(this.LoadButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.CopyButton);
-            this.Controls.Add(this.ShowPass);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.HesloBox);
             this.Controls.Add(this.label3);
@@ -287,16 +275,16 @@
         private System.Windows.Forms.TextBox JmenoBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox HesloBox;
-        private System.Windows.Forms.CheckBox ShowPass;
         private System.Windows.Forms.Button CopyButton;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Button LoadButton;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox KeyBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button AddRecord;
         private System.Windows.Forms.Button RemoveRecord;
-        private System.Windows.Forms.Button EditRecord;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label label6;
     }
 }
 
