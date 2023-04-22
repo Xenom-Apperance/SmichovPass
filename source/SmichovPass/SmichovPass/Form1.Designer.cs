@@ -31,19 +31,22 @@
             this.PasswordViewer = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.StrankaBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.JmenoBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.HesloBox = new System.Windows.Forms.TextBox();
+            this.ShowPass = new System.Windows.Forms.CheckBox();
+            this.CopyButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.LoadButton = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.AddRecord = new System.Windows.Forms.Button();
+            this.RemoveRecord = new System.Windows.Forms.Button();
+            this.EditRecord = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordViewer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,10 +58,12 @@
             this.PasswordViewer.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
             this.PasswordViewer.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.PasswordViewer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.PasswordViewer.Location = new System.Drawing.Point(390, 131);
+            this.PasswordViewer.Location = new System.Drawing.Point(424, 131);
             this.PasswordViewer.Name = "PasswordViewer";
-            this.PasswordViewer.Size = new System.Drawing.Size(436, 321);
+            this.PasswordViewer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.PasswordViewer.Size = new System.Drawing.Size(370, 321);
             this.PasswordViewer.TabIndex = 0;
+            this.PasswordViewer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PasswordViewer_CellContentClick);
             // 
             // label1
             // 
@@ -72,25 +77,25 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(390, 458);
+            this.progressBar1.Location = new System.Drawing.Point(424, 458);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(436, 23);
+            this.progressBar1.Size = new System.Drawing.Size(370, 23);
             this.progressBar1.TabIndex = 2;
             // 
-            // textBox1
+            // StrankaBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(23, 178);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 20);
-            this.textBox1.TabIndex = 3;
+            this.StrankaBox.Location = new System.Drawing.Point(23, 205);
+            this.StrankaBox.Name = "StrankaBox";
+            this.StrankaBox.Size = new System.Drawing.Size(301, 20);
+            this.StrankaBox.TabIndex = 3;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(18, 146);
+            this.label2.Location = new System.Drawing.Point(18, 173);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(254, 29);
+            this.label2.Size = new System.Drawing.Size(258, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "Název stránky (služby)";
             // 
@@ -98,79 +103,80 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(18, 237);
+            this.label3.Location = new System.Drawing.Point(18, 264);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(208, 29);
+            this.label3.Size = new System.Drawing.Size(210, 29);
             this.label3.TabIndex = 6;
             this.label3.Text = "Uživatelské jméno";
             this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
-            // textBox2
+            // JmenoBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(23, 269);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(301, 20);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            this.JmenoBox.Location = new System.Drawing.Point(23, 296);
+            this.JmenoBox.Name = "JmenoBox";
+            this.JmenoBox.Size = new System.Drawing.Size(301, 20);
+            this.JmenoBox.TabIndex = 5;
+            this.JmenoBox.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(18, 324);
+            this.label4.Location = new System.Drawing.Point(18, 351);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 29);
             this.label4.TabIndex = 8;
             this.label4.Text = "Heslo";
             this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
-            // textBox3
+            // HesloBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(23, 356);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(301, 20);
-            this.textBox3.TabIndex = 7;
+            this.HesloBox.Location = new System.Drawing.Point(23, 383);
+            this.HesloBox.Name = "HesloBox";
+            this.HesloBox.Size = new System.Drawing.Size(301, 20);
+            this.HesloBox.TabIndex = 7;
             // 
-            // checkBox1
+            // ShowPass
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox1.Location = new System.Drawing.Point(98, 333);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(96, 17);
-            this.checkBox1.TabIndex = 9;
-            this.checkBox1.Text = "Zobrazit heslo";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ShowPass.AutoSize = true;
+            this.ShowPass.Font = new System.Drawing.Font("Bahnschrift SemiBold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ShowPass.Location = new System.Drawing.Point(98, 360);
+            this.ShowPass.Name = "ShowPass";
+            this.ShowPass.Size = new System.Drawing.Size(97, 17);
+            this.ShowPass.TabIndex = 9;
+            this.ShowPass.Text = "Zobrazit heslo";
+            this.ShowPass.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // CopyButton
             // 
-            this.button1.Location = new System.Drawing.Point(23, 382);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Kopírovat";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.CopyButton.Location = new System.Drawing.Point(23, 409);
+            this.CopyButton.Name = "CopyButton";
+            this.CopyButton.Size = new System.Drawing.Size(75, 23);
+            this.CopyButton.TabIndex = 10;
+            this.CopyButton.Text = "Kopírovat";
+            this.CopyButton.UseVisualStyleBackColor = true;
+            this.CopyButton.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
+            // SaveButton
             // 
-            this.button2.Font = new System.Drawing.Font("Bahnschrift", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button2.Location = new System.Drawing.Point(695, 72);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(131, 53);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Vytvořit soubor";
-            this.button2.UseVisualStyleBackColor = true;
+            this.SaveButton.Font = new System.Drawing.Font("Bahnschrift", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.SaveButton.Location = new System.Drawing.Point(695, 72);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(122, 53);
+            this.SaveButton.TabIndex = 11;
+            this.SaveButton.Text = "Uložit soubor";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.CreateButton_Click);
             // 
-            // button3
+            // LoadButton
             // 
-            this.button3.Font = new System.Drawing.Font("Bahnschrift", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button3.Location = new System.Drawing.Point(568, 72);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(121, 53);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Načíst soubor";
-            this.button3.UseVisualStyleBackColor = true;
+            this.LoadButton.Font = new System.Drawing.Font("Bahnschrift", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LoadButton.Location = new System.Drawing.Point(568, 72);
+            this.LoadButton.Name = "LoadButton";
+            this.LoadButton.Size = new System.Drawing.Size(121, 53);
+            this.LoadButton.TabIndex = 12;
+            this.LoadButton.Text = "Načíst soubor";
+            this.LoadButton.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -185,7 +191,7 @@
             this.label5.Font = new System.Drawing.Font("Bahnschrift", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label5.Location = new System.Drawing.Point(386, 78);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(115, 23);
+            this.label5.Size = new System.Drawing.Size(117, 23);
             this.label5.TabIndex = 14;
             this.label5.Text = "Klíč souboru";
             // 
@@ -199,6 +205,40 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // AddRecord
+            // 
+            this.AddRecord.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.AddRecord.Location = new System.Drawing.Point(23, 131);
+            this.AddRecord.Name = "AddRecord";
+            this.AddRecord.Size = new System.Drawing.Size(107, 39);
+            this.AddRecord.TabIndex = 16;
+            this.AddRecord.Text = "Přidat heslo";
+            this.AddRecord.UseVisualStyleBackColor = true;
+            this.AddRecord.Click += new System.EventHandler(this.AddRecord_Click);
+            // 
+            // RemoveRecord
+            // 
+            this.RemoveRecord.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.RemoveRecord.Location = new System.Drawing.Point(136, 131);
+            this.RemoveRecord.Name = "RemoveRecord";
+            this.RemoveRecord.Size = new System.Drawing.Size(110, 39);
+            this.RemoveRecord.TabIndex = 17;
+            this.RemoveRecord.Text = "Odebrat heslo";
+            this.RemoveRecord.UseVisualStyleBackColor = true;
+            this.RemoveRecord.Click += new System.EventHandler(this.RemoveRecord_Click);
+            // 
+            // EditRecord
+            // 
+            this.EditRecord.Font = new System.Drawing.Font("Bahnschrift SemiBold", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.EditRecord.Location = new System.Drawing.Point(249, 131);
+            this.EditRecord.Name = "EditRecord";
+            this.EditRecord.Size = new System.Drawing.Size(114, 39);
+            this.EditRecord.TabIndex = 18;
+            this.EditRecord.Text = "Upravit heslo";
+            this.EditRecord.UseVisualStyleBackColor = true;
+            this.EditRecord.Click += new System.EventHandler(this.EditRecord_Click);
             // 
             // Form1
             // 
@@ -207,22 +247,26 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(838, 495);
+            this.Controls.Add(this.EditRecord);
+            this.Controls.Add(this.RemoveRecord);
+            this.Controls.Add(this.AddRecord);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.LoadButton);
+            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.CopyButton);
+            this.Controls.Add(this.ShowPass);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.HesloBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.JmenoBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.StrankaBox);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PasswordViewer);
             this.Controls.Add(this.pictureBox1);
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.PasswordViewer)).EndInit();
@@ -237,19 +281,22 @@
         private System.Windows.Forms.DataGridView PasswordViewer;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox StrankaBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox JmenoBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox HesloBox;
+        private System.Windows.Forms.CheckBox ShowPass;
+        private System.Windows.Forms.Button CopyButton;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Button LoadButton;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button AddRecord;
+        private System.Windows.Forms.Button RemoveRecord;
+        private System.Windows.Forms.Button EditRecord;
     }
 }
 
