@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.PasswordViewer = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.StrankaBox = new System.Windows.Forms.TextBox();
@@ -180,7 +179,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.ImageLocation = "C:\\Users\\xenom\\Desktop\\SmichovPass\\source\\SmichovPass\\SSPS Logo.png";
             this.pictureBox1.Location = new System.Drawing.Point(613, 5);
             this.pictureBox1.Name = "pictureBox1";
@@ -248,7 +246,8 @@
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "s";
+            this.Text = "SmichovPass";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PasswordViewer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
