@@ -143,6 +143,7 @@ namespace SmichovPass
                     return;
             }
             database.Clear(); //Vynulovat databázi
+            LoadDataTable();
             // Zobrazení okna pro výběr textového souboru
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Text Files|*.txt";
