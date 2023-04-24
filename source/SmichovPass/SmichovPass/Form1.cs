@@ -18,13 +18,30 @@ namespace SmichovPass
     public partial class Form1 : Form
     {
         private List<record> database;
+        private DataTable dataTable;
         public Form1()
         {
             InitializeComponent();
-            this.database = new List<record>();
-            this.database.Add(new record { Stranka = "google.com", Jmeno = "admin", Heslo = "1234" });
-            this.database.Add(new record { Stranka = "ssps.cz", Jmeno = "sablik", Heslo = "4321" });
-            PasswordViewer.DataSource = database;
+            this.database = new List<record>(); //Vytvořit list s hesly
+            LoadDataTable(); //Nahrát list s hesly do objektu typu DataTable
+            PasswordViewer.DataSource = dataTable; //Nahrát dataTable do DataGridView
+        }
+        private void LoadDataTable()
+        {
+            this.dataTable = new DataTable(); //Vytvořit nový DataTable (oprava chyb s neaktualizací zobrazovače pole)
+            //Vytvořit nové sloupce v DataTable
+            dataTable.Columns.Add("Stranka", typeof(string));
+            dataTable.Columns.Add("Jmeno", typeof(string));
+            dataTable.Columns.Add("Heslo", typeof(string));
+            //Nahrát informace z listu do DataTable
+            foreach (var record in database)
+            {
+                DataRow row = dataTable.NewRow();
+                row["Stranka"] = record.Stranka;
+                row["Jmeno"] = record.Jmeno;
+                row["Heslo"] = record.Heslo;
+                dataTable.Rows.Add(row);
+            }
         }
 
         private void Label3_Click(object sender, EventArgs e)
@@ -39,8 +56,8 @@ namespace SmichovPass
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            record r = PasswordViewer.SelectedRows[0].DataBoundItem as record;
-            Clipboard.SetText(r.Heslo);
+            record r = PasswordViewer.SelectedRows[0].DataBoundItem as record; //Zjistit zvolené heslo
+            Clipboard.SetText(r.Heslo); //Vložit heslo do schránky
         }
 
         private void Label4_Click(object sender, EventArgs e)
@@ -63,29 +80,21 @@ namespace SmichovPass
             //Vytvořit záznam s parametry zadané uživatelem
             record r = new record { Stranka = StrankaBox.Text, Jmeno = JmenoBox.Text, Heslo = HesloBox.Text };
             database.Add(r); //Přidat záznam do databáze
-            PasswordViewer.DataSource = null; //Oprava chyby s aktualizací datapole
-            PasswordViewer.DataSource = database; //Aktualizovat datapole
+            LoadDataTable(); //Nahrát nový list do DataTable
+            PasswordViewer.DataSource = dataTable; //Aktualizovat datapole
         }
 
         private void RemoveRecord_Click(object sender, EventArgs e)
         {
             int index = PasswordViewer.SelectedRows[0].Index; //Zjistit zvolený řádek
-            database.RemoveAt(index);
-            PasswordViewer.DataSource = null; //Oprava chyby s aktualizací datapole
-            PasswordViewer.DataSource = database; //Aktualizovat datapole
+            database.RemoveAt(index); //Smazat zvolený záznam (heslo)
+            LoadDataTable(); //Nahrát aktualizovaný list do DataTable
+            PasswordViewer.DataSource = dataTable; //Aktualizovat datapole
         }
 
         private void EditRecord_Click(object sender, EventArgs e)
         {
-            int index = PasswordViewer.SelectedRows[0].Index; //Zjistit zvolený řádek
-            record n = new record();
-            //Nahrát informace z textových polí
-            n.Stranka = StrankaBox.Text;
-            n.Jmeno = JmenoBox.Text;
-            n.Heslo = HesloBox.Text;
-            database[index] = n;
-            PasswordViewer.DataSource = null; //Oprava chyby s aktualizací datapole
-            PasswordViewer.DataSource = database; //Aktualizovat datapole
+
         }
 
         private void CreateButton_Click(object sender, EventArgs e)
@@ -158,6 +167,10 @@ namespace SmichovPass
                     key = sha256.ComputeHash(inputBytes);
                 }
                 s = Decrypt(ciphertext, key, IV);
+                if (s == null)
+                {
+                    return;
+                }
                 // Nahrát text do databáze pro zobrazení
                 string[] records = s.Split(';');
                 foreach (string i in records)
@@ -171,8 +184,8 @@ namespace SmichovPass
                     database.Add(new record { Stranka = info[0], Jmeno = info[1], Heslo = info[2] });
                 }
             }
-            PasswordViewer.DataSource = null; //Oprava chyby s aktualizací datapole
-            PasswordViewer.DataSource = database; //Aktualizovat datapole
+            LoadDataTable(); //Nahrát list do DataTable
+            PasswordViewer.DataSource = dataTable; //Aktualizovat datapole
         }
 
 
@@ -265,6 +278,11 @@ namespace SmichovPass
                 Console.WriteLine("Došlo k chybě při dešifrování: " + ex.Message);
                 return null;
             }
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
         }
     }
     public class record

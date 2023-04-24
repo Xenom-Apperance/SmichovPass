@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.PasswordViewer = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.StrankaBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,16 +75,9 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "SmichovPass";
             // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(424, 467);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(370, 23);
-            this.progressBar1.TabIndex = 2;
-            // 
             // StrankaBox
             // 
-            this.StrankaBox.Location = new System.Drawing.Point(23, 235);
+            this.StrankaBox.Location = new System.Drawing.Point(23, 209);
             this.StrankaBox.Name = "StrankaBox";
             this.StrankaBox.Size = new System.Drawing.Size(301, 20);
             this.StrankaBox.TabIndex = 3;
@@ -93,7 +86,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Bahnschrift SemiLight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(18, 203);
+            this.label2.Location = new System.Drawing.Point(18, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(258, 29);
             this.label2.TabIndex = 4;
@@ -103,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Bahnschrift SemiLight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.Location = new System.Drawing.Point(18, 294);
+            this.label3.Location = new System.Drawing.Point(18, 268);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(210, 29);
             this.label3.TabIndex = 6;
@@ -112,7 +105,7 @@
             // 
             // JmenoBox
             // 
-            this.JmenoBox.Location = new System.Drawing.Point(23, 326);
+            this.JmenoBox.Location = new System.Drawing.Point(23, 300);
             this.JmenoBox.Name = "JmenoBox";
             this.JmenoBox.Size = new System.Drawing.Size(301, 20);
             this.JmenoBox.TabIndex = 5;
@@ -122,7 +115,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(18, 381);
+            this.label4.Location = new System.Drawing.Point(18, 355);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 29);
             this.label4.TabIndex = 8;
@@ -131,7 +124,7 @@
             // 
             // HesloBox
             // 
-            this.HesloBox.Location = new System.Drawing.Point(23, 413);
+            this.HesloBox.Location = new System.Drawing.Point(23, 387);
             this.HesloBox.Name = "HesloBox";
             this.HesloBox.Size = new System.Drawing.Size(301, 20);
             this.HesloBox.TabIndex = 7;
@@ -187,8 +180,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ImageLocation = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Logo-ssps.svg/1200px-Lo" +
-    "go-ssps.svg.png";
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.ImageLocation = "C:\\Users\\xenom\\Desktop\\SmichovPass\\source\\SmichovPass\\SSPS Logo.png";
             this.pictureBox1.Location = new System.Drawing.Point(613, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(181, 61);
@@ -200,7 +193,7 @@
             // AddRecord
             // 
             this.AddRecord.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.AddRecord.Location = new System.Drawing.Point(217, 441);
+            this.AddRecord.Location = new System.Drawing.Point(217, 415);
             this.AddRecord.Name = "AddRecord";
             this.AddRecord.Size = new System.Drawing.Size(107, 39);
             this.AddRecord.TabIndex = 16;
@@ -223,7 +216,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Bahnschrift SemiBold", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label6.Location = new System.Drawing.Point(15, 157);
+            this.label6.Location = new System.Drawing.Point(15, 131);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(209, 46);
             this.label6.TabIndex = 18;
@@ -250,13 +243,12 @@
             this.Controls.Add(this.JmenoBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.StrankaBox);
-            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PasswordViewer);
             this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "s";
             ((System.ComponentModel.ISupportInitialize)(this.PasswordViewer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -268,7 +260,6 @@
 
         private System.Windows.Forms.DataGridView PasswordViewer;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.TextBox StrankaBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
