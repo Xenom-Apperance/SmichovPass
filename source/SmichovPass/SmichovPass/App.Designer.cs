@@ -1,6 +1,6 @@
 ﻿namespace SmichovPass
 {
-    partial class Form1
+    partial class App
     {
         /// <summary>
         /// Vyžaduje se proměnná návrháře.
@@ -62,7 +62,6 @@
             this.PasswordViewer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.PasswordViewer.Size = new System.Drawing.Size(370, 301);
             this.PasswordViewer.TabIndex = 0;
-            this.PasswordViewer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.PasswordViewer_CellContentClick);
             // 
             // label1
             // 
@@ -100,7 +99,6 @@
             this.label3.Size = new System.Drawing.Size(210, 29);
             this.label3.TabIndex = 6;
             this.label3.Text = "Uživatelské jméno";
-            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // JmenoBox
             // 
@@ -108,7 +106,6 @@
             this.JmenoBox.Name = "JmenoBox";
             this.JmenoBox.Size = new System.Drawing.Size(301, 20);
             this.JmenoBox.TabIndex = 5;
-            this.JmenoBox.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
             // label4
             // 
@@ -119,7 +116,6 @@
             this.label4.Size = new System.Drawing.Size(74, 29);
             this.label4.TabIndex = 8;
             this.label4.Text = "Heslo";
-            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // HesloBox
             // 
@@ -136,7 +132,7 @@
             this.CopyButton.TabIndex = 10;
             this.CopyButton.Text = "Kopírovat zvolené heslo do schránky";
             this.CopyButton.UseVisualStyleBackColor = true;
-            this.CopyButton.Click += new System.EventHandler(this.Button1_Click);
+            this.CopyButton.Click += new System.EventHandler(this.CopyButton_Click);
             // 
             // SaveButton
             // 
@@ -186,7 +182,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // AddRecord
             // 

@@ -15,11 +15,11 @@ using System.Collections;
 
 namespace SmichovPass
 {
-    public partial class Form1 : Form
+    public partial class App : Form
     {
         private List<record> database;
         private DataTable dataTable;
-        public Form1()
+        public App()
         {
             InitializeComponent();
             this.database = new List<record>(); //Vytvořit list s hesly
@@ -44,35 +44,11 @@ namespace SmichovPass
             }
         }
 
-        private void Label3_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void TextBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
+        private void CopyButton_Click(object sender, EventArgs e)
         {
             record r = PasswordViewer.SelectedRows[0].DataBoundItem as record; //Zjistit zvolené heslo
             Clipboard.SetText(r.Heslo); //Vložit heslo do schránky
-        }
-
-        private void Label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void PasswordViewer_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void AddRecord_Click(object sender, EventArgs e)
@@ -90,11 +66,6 @@ namespace SmichovPass
             database.RemoveAt(index); //Smazat zvolený záznam (heslo)
             LoadDataTable(); //Nahrát aktualizovaný list do DataTable
             PasswordViewer.DataSource = dataTable; //Aktualizovat datapole
-        }
-
-        private void EditRecord_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void CreateButton_Click(object sender, EventArgs e)

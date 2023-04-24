@@ -3,9 +3,9 @@ C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\bin\Release\Sm
 C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\bin\Release\SmichovPass.pdb
 C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.csproj.AssemblyReference.cache
 C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.csproj.SuggestedBindingRedirects.cache
-C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.Form1.resources
 C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.Properties.Resources.resources
 C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.csproj.GenerateResource.cache
 C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.csproj.CoreCompileInputs.cache
 C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.exe
 C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.pdb
+C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.App.resources
