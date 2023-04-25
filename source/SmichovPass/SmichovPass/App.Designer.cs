@@ -41,11 +41,11 @@
             this.LoadButton = new System.Windows.Forms.Button();
             this.KeyBox = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AddRecord = new System.Windows.Forms.Button();
             this.RemoveRecord = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PasswordViewer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -173,16 +173,6 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "Klíč souboru";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.ImageLocation = "C:\\Users\\xenom\\Desktop\\SmichovPass\\source\\SmichovPass\\SSPS Logo.png";
-            this.pictureBox1.Location = new System.Drawing.Point(613, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(181, 61);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
             // AddRecord
             // 
             this.AddRecord.Font = new System.Drawing.Font("Bahnschrift SemiBold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -215,13 +205,24 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Nové heslo";
             // 
-            // Form1
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SmichovPass.Properties.Resources.SSPS_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(596, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 66);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // App
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(838, 495);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.RemoveRecord);
             this.Controls.Add(this.AddRecord);
@@ -238,11 +239,9 @@
             this.Controls.Add(this.StrankaBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.PasswordViewer);
-            this.Controls.Add(this.pictureBox1);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "App";
             this.Text = "SmichovPass";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PasswordViewer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -265,11 +264,11 @@
         private System.Windows.Forms.Button LoadButton;
         private System.Windows.Forms.TextBox KeyBox;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button AddRecord;
         private System.Windows.Forms.Button RemoveRecord;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
