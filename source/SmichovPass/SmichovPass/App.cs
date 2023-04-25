@@ -44,6 +44,21 @@ namespace SmichovPass
             }
         }
 
+        private void UpdateListFromDataTable()
+        {
+            database.Clear(); //Vymazat aktuální, zastaralý list
+            //Zjistit úpravy datapole uživatelem a nahrání do listu database
+            foreach (DataRow row in dataTable.Rows)
+            {
+                record r = new record();
+                //Přečíst data z dataTable
+                r.Stranka = row["Stranka"].ToString();
+                r.Jmeno = row["Jmeno"].ToString();
+                r.Heslo = row["Heslo"].ToString();
+                database.Add(r);
+            }
+        }
+
 
         private void CopyButton_Click(object sender, EventArgs e)
         {
@@ -70,6 +85,7 @@ namespace SmichovPass
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
+            UpdateListFromDataTable(); //Zjistit a nahrát úpravy dataTable uživatelem do database
             string s = "";
             //Převést databázi na jeden dlouhý řetězec (string)
             foreach (record i in database)
@@ -104,6 +120,7 @@ namespace SmichovPass
 
         private void LoadButton_Click(object sender, EventArgs e)
         {
+            UpdateListFromDataTable(); //Zjistit a nahrát úpravy dataTable uživatelem do database
             //Vytvořit okno o upozornění
             DialogResult dr = MessageBox.Show("Jste si jistí s vaším klíčem? Data aktuálně viditelná v datovém poli nemusí být uložená!", "Klíč", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             switch (dr)
