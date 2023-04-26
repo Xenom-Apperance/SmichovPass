@@ -9,3 +9,8 @@ C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\Sm
 C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.exe
 C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.pdb
 C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.App.resources
+C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\bin\Release\SmichovPass.exe.manifest
+C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\bin\Release\SmichovPass.application
+C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.TrustInfo.xml
+C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.exe.manifest
+C:\Users\xenom\Desktop\SmichovPass\source\SmichovPass\SmichovPass\obj\Release\SmichovPass.application

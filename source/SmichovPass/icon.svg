@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="116.81402mm"
+   height="152.54297mm"
+   viewBox="0 0 116.81402 152.54297"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="translate(-42.107492,-58.396868)">
+    <g
+       id="g246"
+       style="fill:#00406c;fill-opacity:1;stroke:#0900a8;stroke-width:4.44472">
+      <path
+         id="path252"
+         style="fill:#00406c;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-linejoin:round"
+         d="m 184.33789,116.79373 -80.25091,147.72111 v -22.68733 l 80.25091,-90.6204 z"
+         points="104.08698,264.51484 104.08698,241.82751 184.33789,151.20711 184.33789,116.79373 " />
+      <path
+         id="path256"
+         style="fill:#00406c;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-linejoin:round"
+         d="m 184.33789,151.20711 -80.25091,90.6204 -19.871998,2.95801 116.814008,-87.93862 z"
+         points="104.08698,241.82751 84.214982,244.78552 201.02899,156.8469 184.33789,151.20711 " />
+      <path
+         id="path248"
+         style="fill:#00406c;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-linejoin:round"
+         d="m 184.33789,116.79373 v 34.41338 l 16.6911,5.63979 v -30.8597 z"
+         points="184.33789,151.20711 201.02899,156.8469 201.02899,125.9872 184.33789,116.79373 " />
+      <path
+         id="path250"
+         style="fill:#00406c;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-linejoin:round"
+         d="M 184.33789,116.79373 104.08698,264.51484 84.214982,269.33673 201.02899,125.9872 Z"
+         points="104.08698,264.51484 84.214982,269.33673 201.02899,125.9872 184.33789,116.79373 " />
+      <path
+         id="path254"
+         style="fill:#00406c;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-linejoin:round"
+         d="m 104.08698,264.51484 v -22.68733 l -19.871998,2.95801 v 24.55121 z"
+         points="104.08698,241.82751 84.214982,244.78552 84.214982,269.33673 104.08698,264.51484 " />
+      <path
+         id="path258"
+         style="fill:#00406c;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-linejoin:round"
+         d="M 201.02899,125.9872 84.214982,269.33673 V 244.78552 L 201.02899,156.8469 Z"
+         points="84.214982,269.33673 84.214982,244.78552 201.02899,156.8469 201.02899,125.9872 " />
+    </g>
+  </g>
+</svg>
