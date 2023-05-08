@@ -12,7 +12,7 @@ K realizaci tohoto projektu bude využíváno rozhraní WindowsForms a programov
 Předpokládaná náročnost je poměrně vysoká z důvodu pozdního začátku práce s projektu, ale měl by být realizovatelný.
 
 ## Licence
-Štít: [![CC BY 4.0][cc-by-shield]][cc-by]
+[![CC BY 4.0][cc-by-shield]][cc-by]
 
 Tato práce je licencována pod licencí
 [Creative Commons Attribution 4.0 International License][cc-by].
