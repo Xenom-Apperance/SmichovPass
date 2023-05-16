@@ -62,8 +62,8 @@ namespace SmichovPass
 
         private void CopyButton_Click(object sender, EventArgs e)
         {
-            record r = PasswordViewer.SelectedRows[0].DataBoundItem as record; //Zjistit zvolené heslo
-            Clipboard.SetText(r.Heslo); //Vložit heslo do schránky
+            record rec = database[PasswordViewer.CurrentCell.RowIndex]; //Zjistit zvolené heslo
+            Clipboard.SetText(rec.Heslo); //Vložit heslo do schránky
         }
 
         private void AddRecord_Click(object sender, EventArgs e)
